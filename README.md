@@ -1,8 +1,7 @@
 # Pi-Interface
 
-Controlling LED lights with Raspberry Pi using Web Interface
+Controlling LED lights with Raspberry Pi using Web Interface (Technology used: Python, HTML5, CSS3, JS, WebIOPi framework)
 
-Technology used: Python, HTML5, CSS3, JS, WebIOPi framework
 
 The Raspberry Pi is a small (it's the size of a credit card) single board computer that we can connect to just about any TV or monitor, add a keyboard, and have a complete and functional desktop computer. And it only costs about $35 to get started. It allows us to do everything we could do with a regular Linux computer (Connecting to the internet, watching videos, launching applications) but also to interact with the world surrounding it, just like an Arduino.
 
