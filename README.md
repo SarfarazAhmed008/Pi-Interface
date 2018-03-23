@@ -85,38 +85,68 @@ LED has two legs coming out of it. One is longer than the other. LEDs are polari
 The Code:
 
 [1]import RPi.GPIO as GPIO ##imports the GPIO Library
-[2]
-[3]## GPIO pin manipulation
-[4]GPIO.setmode(GPIO.BCM) ## Use Broadcomm pin numbers
-[5]GPIO.setup(17, GPIO.OUT) ## Sets GPIO pin 17 as an output 
-[6]GPIO.output(17,True) ## Sets GPIO pin 17 to high (on, 3.3v)
-[7]
-[8]
-[9]## Error handling and cleanup
-[10]counter = 0  
-[11] 
-[12]try:  
-[13]    ## 10 second counter  
-[14]    while counter < 4500000:   
-[15]        counter += 1  
-[16]    print "%d" % counter  
-[17]  
-[18]except KeyboardInterrupt:  
-[19]    ## This code runs when you break the program with CTRL+c
-[20]    ## then the code in the finally block will run
-[21]    print "\n", counter 
-[22]  
-[23]except:  
-[24]    ## This code runs when an error is encountered
-[25]    ## then the code in the finally block will run
-[26]    print "Put error handling code here instead of this message"  
-[27]  
-[28]finally:  
-[29]	## This code runs any and every time the code exits 
-[30]	## even if there was an uncaught error.
-[31]	## We're using it to reset the GPIO pin
-[32]    GPIO.cleanup()
 
+[2]
+
+[3]## GPIO pin manipulation
+
+[4]GPIO.setmode(GPIO.BCM) ## Use Broadcomm pin numbers
+
+[5]GPIO.setup(17, GPIO.OUT) ## Sets GPIO pin 17 as an output 
+
+[6]GPIO.output(17,True) ## Sets GPIO pin 17 to high (on, 3.3v)
+
+[7]
+
+[8]
+
+[9]## Error handling and cleanup
+
+[10]counter = 0  
+
+[11] 
+
+[12]try:  
+
+[13]    ## 10 second counter  
+
+[14]    while counter < 4500000:   
+
+[15]        counter += 1  
+
+[16]    print "%d" % counter  
+
+[17]  
+
+[18]except KeyboardInterrupt:  
+
+[19]    ## This code runs when you break the program with CTRL+c
+
+[20]    ## then the code in the finally block will run
+
+[21]    print "\n", counter 
+
+[22]  
+
+[23]except:  
+
+[24]    ## This code runs when an error is encountered
+
+[25]    ## then the code in the finally block will run
+
+[26]    print "Put error handling code here instead of this message"  
+
+[27]  
+
+[28]finally:  
+
+[29]	## This code runs any and every time the code exits 
+
+[30]	## even if there was an uncaught error.
+
+[31]	## We're using it to reset the GPIO pin
+
+[32]    GPIO.cleanup()
 
 Software installation
 
@@ -445,21 +475,21 @@ sudo nano /etc/webiopi/config
 Code:
 
 [HTTP]
-# HTTP Server configuration
+#HTTP Server configuration
 enabled = true
 port = 8000
 
-# File containing sha256(base64("user:password"))
-# Use webiopi-passwd command to generate it
+#File containing sha256(base64("user:password"))
+#Use webiopi-passwd command to generate it
 passwd-file = /etc/webiopi/passwd
 
-# Change login prompt message
+#Change login prompt message
 prompt = "WebIOPi"
 
-# Use doc-root to change default HTML and resource files location
+#Use doc-root to change default HTML and resource files location
 #doc-root = /home/pi/webiopi/examples/scripts/macros
 doc-root = /home/Projects/Webio/html
-# Use welcome-file to change the default "Welcome" file
+#Use welcome-file to change the default "Welcome" file
 #welcome-file = index.html
 
 #————————————————————————————————————#
